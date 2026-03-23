@@ -1,0 +1,34 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+.venv/
+venv/
+env/
+
+.env
+.env.*
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+.coverage
+htmlcov/
+.pytest_cache/
+ # Runtime caches
+data/abstract_semantics_cache.json
+
+# Python cache
+__pycache__/
+*.pyc
+data/abstract_semantics_cache.json
+outputs/
+results.json
+
+# OS
+.DS_Store

@@ -32,3 +32,10 @@ results.json
 
 # OS
 .DS_Store
+
+.embedding_cache/
+data/
+*.pkl
+*.bin
+*.npy
+*.index

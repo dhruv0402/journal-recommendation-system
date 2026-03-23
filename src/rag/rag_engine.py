@@ -59,8 +59,15 @@ class RAGEngine:
             # save index so next startup is instant
             faiss.write_index(self.index, index_path)
 
-        # -------- GROQ LLM (FAST + FREE) --------
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        # -------- GROQ LLM (SAFE INIT) --------
+        api_key = os.getenv("GROQ_API_KEY")
+
+        if not api_key:
+            raise ValueError(
+                "GROQ_API_KEY not found. Please set it in your environment variables."
+            )
+
+        self.client = Groq(api_key=api_key)
 
     def retrieve(self, query: str, k: int = 5):
 
